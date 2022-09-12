@@ -1,0 +1,45 @@
+nav a {
+    color: rgb(0 0 0 / 90%) !important;
+}
+nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+nav .nav-link {
+    font-size: 1.1rem;
+}
+.content {
+    padding-top: 80px;
+}
+.active {
+    text-decoration: underline;
+}
+.heading {
+    margin-bottom: 50px;
+}
+.news-blog {
+    background-color: #f8f9fa !important;
+    padding: 20px 0;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.feedback-block {
+    margin: 50px 0;
+}
+.comment-block {
+    margin-bottom: 80px;
+}
+.comment-form {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 15px;
+}
+.footer {
+    background-color: #f8f9fa !important;
+    height: 220px;
+    width: 100%;
+}
+.disabled {
+    color: gray;
+}
