@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentRequest;
 use App\Models\Comments;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Console\Input\Input;
 
 class CommentSystem extends Controller
@@ -11,10 +12,10 @@ class CommentSystem extends Controller
     public function SaveComment(CommentRequest $request, $id)
     {
         $comment = new Comments();
-        $comment->post_id = $id;
-        $comment->title = $request->input('title');
-        $comment->message = $request->input('message');
+        $comment->post_id = $request->post_id;
+        $comment->username = $request->username;
+        $comment->message = $request->message;
         $comment->save();
-        return redirect()->back()->with('success', 'Ваша заявка принята!');
+        return response()->json(['code' => 200, 'data' => $comment], 200);
     }
 }

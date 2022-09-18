@@ -17,7 +17,7 @@ class ArticlesController extends Controller
     public function ViewPost($id)
     {
         $post = Post::find($id);
-        $comments = Comments::where('post_id', $id)->get();
+        $comments = Comments::where('post_id', $id)->orderBy('id')->get();
         return view('articles.article', compact('post', 'comments'));
     }
 }

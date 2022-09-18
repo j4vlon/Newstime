@@ -17,7 +17,7 @@ class CreateLikeSystemsTable extends Migration
             $table->increments('id');
             $table->integer('post_id');
             $table->smallInteger('likes')->default(0);
-            $table->smallInteger('dislike')->default(0);
+            $table->smallInteger('dislikes')->default(0);
             $table->timestamps();
         });
     }

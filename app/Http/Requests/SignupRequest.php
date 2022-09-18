@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Unique;
 
-class CommentRequest extends FormRequest
+class SignupRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +25,10 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required',
-            'message' => 'required'
+            'name' => ['required', 'string'],
+            'login' => ['required', 'min:3'],
+            'email' => ['required', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:4']
         ];
     }
 }

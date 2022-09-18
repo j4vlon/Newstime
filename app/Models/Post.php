@@ -11,11 +11,11 @@ class Post extends Model
 
     public function likes()
     {
-        return $this->hasMany('App\Models\LikeSystem', 'post_id')->sum('like');
+        return $this->hasMany('App\Models\LikeSystem', 'post_id')->sum('likes');
     }
 
     public function dislikes()
     {
-        return $this->hasMany('App\Models\LikeSystem', 'post_id')->sum('dislike');
+        return $this->hasMany('App\Models\LikeSystem', 'post_id')->sum('dislikes');
     }
 }
